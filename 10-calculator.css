@@ -1,0 +1,42 @@
+body{
+    background-color: rgb(11, 9, 9);
+}
+button{
+    border: none;
+    border-radius: 50%;
+    color:rgb(238, 232, 226);
+    font-size: large;
+    background-color: rgb(243, 111, 28);
+    padding: 20px 25px
+
+
+}
+
+.heading{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.container{
+
+   
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.js-show{
+    color: rgb(229, 229, 238);
+    font-size: larger;
+}
+
+h1{
+    color:aliceblue;
+    outline: rgb(240, 246, 245) solid 1px;
+    padding:10px;
+    border-radius: 3%;
+}
