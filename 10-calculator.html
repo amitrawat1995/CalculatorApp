@@ -1,144 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    
-    <title>Calculator</title>
-    <link rel="stylesheet" href="10-calculator.css">
-  </head>
-  <body>
-    <div class="heading">
-      <h1>Calculator</h1>
-    </div>
-    
-    <div class="container">
-        <div class="third">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="10-calculator.css">
+  <title>Calculator</title>
+</head>
+<body>
+  <div class="heading">
+    <h1>Calculator</h1>
+  </div>
+  
+  <div class="container">
+      <div class="third">
+        
+        <p>
+          <button onclick="
+              updateCalculation('1');
+            ">1</button>
+                 
           
-          <p>
-            <button onclick="
-                updateCalculation('1');
-              ">1</button>
+          <button onclick="
+            updateCalculation('2');
+          ">2</button>
+    
+          
+          <button onclick="
+            updateCalculation('3');
+          ">3</button>
             
-            
-            
-            <button onclick="
-              updateCalculation('2');
-            ">2</button>
+          <button onclick="
+            updateCalculation(' + ');
+          ">+</button>
+    
+        </P>
+    
+        <p>
+          <button onclick="
+          updateCalculation('4');
+        ">4</button>
       
-            
-            <button onclick="
-              updateCalculation('3');
-            ">3</button>
-              
-            <button onclick="
-              updateCalculation(' + ');
-            ">+</button>
       
+      
+          <button onclick="
+            updateCalculation('5');
+          ">5</button>
+    
+          
+          <button onclick="
+              updateCalculation('6');
+          ">6</button>
+            
+          <button onclick="
+             updateCalculation(' - ');
+          ">-</button>
+            
+        </p>
+    
+        <P>
+          <button onclick="
+            updateCalculation('7');
+          ">7</button>
+        
+        
+        
+        <button onclick="
+            updateCalculation('8');
+        ">8</button>
+    
+        
+        <button onclick="
+           updateCalculation('9');
+        ">9</button>
+          
+        <button onclick="
+           updateCalculation(' * ');
+        ">*</button>
+        
           </P>
-      
-          <p>
-            <button onclick="
-            updateCalculation('4');
-          ">4</button>
-        
-        
-        
-            <button onclick="
-              updateCalculation('5');
-            ">5</button>
-      
-            
-            <button onclick="
-                updateCalculation('6');
-            ">6</button>
-              
-            <button onclick="
-               updateCalculation(' - ');
-            ">-</button>
-              
-          </p>
-      
+    
           <P>
             <button onclick="
-              updateCalculation('7');
-            ">7</button>
-          
-          
-          
-          <button onclick="
-              updateCalculation('8');
-          ">8</button>
-      
-          
-          <button onclick="
-             updateCalculation('9');
-          ">9</button>
-            
-          <button onclick="
-             updateCalculation(' * ');
-          ">*</button>
-          
-            </P>
-      
-            <P>
-              <button onclick="
-              updateCalculation('0');
-            ">0</button>
-          
-          
-          
-          <button onclick="
-             updateCalculation('.');
-          ">.</button>
-      
-          <button onclick="
-              calculation= eval(calculation);
-             
-              displayCalculation();
-      
-              localStorage.setItem('calculation',calculation);
-          " class="js-equal">=</button>
-            
-          <button onclick="
-              updateCalculation(' / ');
-      
-          ">/</button>
-            
-          
-            </P>
-      
-            <p>
-            <button onclick="
-              calculation ='';
-              displayCalculation();
-      
-              localStorage.setItem('calculation',calculation);
-            ">Clear</button>
-      
-            </p>
-      
-            <p class="js-show"></p>
-        </div>
-    </div>
+            updateCalculation('0');
+          ">0</button>
+        
+        
+        
+        <button onclick="
+           updateCalculation('.');
+        ">.</button>
     
-    <script>
-      let calculation = localStorage.getItem('calculation');
+        <button onclick="
+            calculation= eval(calculation);
+           
+            displayCalculation();
+    
+            localStorage.setItem('calculation',calculation);
+        " class="js-equal">=</button>
+          
+        <button onclick="
+            updateCalculation(' / ');
+    
+        ">/</button>
+          
+        
+          </P>
+    
+          <p>
+          <button onclick="
+            calculation ='';
+            displayCalculation();
+    
+            localStorage.setItem('calculation',calculation);
+          ">Clear</button>
+    
+          </p>
+    
+          <p class="js-show"></p>
+      </div>
+  </div>
 
+  <script>
+    let calculation = localStorage.getItem('calculation');
+
+    displayCalculation();
+    
+    function updateCalculation (value) {
+      calculation += value;
+     
       displayCalculation();
       
-      function updateCalculation (value) {
-        calculation += value;
-       
-        displayCalculation();
-        
-        localStorage.setItem('calculation', calculation);
+      localStorage.setItem('calculation', calculation);
+    }
+
+      function displayCalculation () {
+
+          document.querySelector('.js-show').innerHTML= calculation;
       }
+   
 
-        function displayCalculation () {
-
-            document.querySelector('.js-show').innerHTML= calculation;
-        }
-     
-
-    </script>
-  </body>
+  </script>
+</body>
 </html>
